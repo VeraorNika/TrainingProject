@@ -1,12 +1,26 @@
 {
   "name": "training-project",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Project for experiments",
+  "author":"VeraOrNika: https://github.com/VeraorNika",
+  "homepage": "https://veraornika.github.io/TrainingProject/",
+  "keywords": [
+    "training",
+    "examples",
+    "Angular studying"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VeraorNika/TrainingProject"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start o": "ng serve --open",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build gh-pages": "ng deploy --base-href=/TrainingProject/"
   },
   "private": true,
   "dependencies": {
