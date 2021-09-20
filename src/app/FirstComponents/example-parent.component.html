@@ -1,0 +1,53 @@
+<div>Это ExampleParentComponent</div>
+
+<div class="binding">
+<label>Введите имя:</label>
+<input [(ngModel)]="name" placeholder="name">
+</div>
+
+<h1>Добро пожаловать, {{name}}! Ниже - примеры привязки свойств и атрибутов</h1>
+
+<div class="binding">
+<label>Div с DOM-свойством textContent:</label>
+<div [textContent]="name">This Content is ignored</div>
+</div>
+
+<div class="binding">
+<label>Input с DOM-свойством value:</label>
+<input [value]="name" placeholder="name" type="text">
+</div>
+
+<div class="binding">
+<label>Input с аттрибутом value:</label>
+<input type="text" value="{{name}}"/>
+</div>
+
+<div class="binding">
+<label>Input с аттрибутом value:</label>
+<input type="text" value="{{name}}"/>
+</div>
+
+<div class="binding">
+<label>Button with click-event (look at the console)</label>
+<button (click)="writeToConsoleClickEvent($event)"></button>
+</div>
+
+<div class="binding">
+  <label>Button with click-event (look at the console)</label>
+  <button (blur)="writeToConsoleBlurEvent($event)"></button>
+</div>
+
+<div class="binding">
+  <label>Div with class-binding:</label>
+  <div [class.isColorBlue]="name">This text is blue if name is not empty</div>
+</div>
+
+<example-child
+    inputValue="Some Input Value"
+    [changingInputValue]="name"
+
+>
+<span class="orange">Эта строка помещена между тэгами дочернего компонента и она будет располагаться внутри ng-content.
+  За стиль этой строки отвечает родительский компонент, даже если в дочернем есть стиль с таким же селектором
+</span>
+</example-child>
