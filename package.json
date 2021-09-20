@@ -2,7 +2,7 @@
   "name": "training-project",
   "version": "1.0.0",
   "description": "Project for experiments",
-  "author":"VeraOrNika: https://github.com/VeraorNika",
+  "author": "VeraOrNika: https://github.com/VeraorNika",
   "homepage": "https://veraornika.github.io/TrainingProject/",
   "keywords": [
     "training",
@@ -20,7 +20,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build gh-pages": "ng deploy --base-href=/TrainingProject/"
+    "build gh-pages": "ng deploy --base-href=/TrainingProject/",
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
@@ -32,6 +33,7 @@
     "@angular/platform-browser": "~12.1.0",
     "@angular/platform-browser-dynamic": "~12.1.0",
     "@angular/router": "~12.1.0",
+    "bootstrap": "^5.1.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
@@ -40,6 +42,7 @@
     "@angular-devkit/build-angular": "~12.1.4",
     "@angular/cli": "~12.1.4",
     "@angular/compiler-cli": "~12.1.0",
+    "@angular/language-service": "^12.2.6",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
     "angular-cli-ghpages": "^1.0.0-rc.2",
@@ -49,6 +52,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "prettier": "^2.4.1",
     "typescript": "~4.3.2"
   }
 }
