@@ -1,29 +1,24 @@
-<div>Это ExampleParentComponent</div>
+<div>This is ExampleParentComponent</div>
 
 <div class="binding">
-<label>Введите имя:</label>
+<label>Enter a name:</label>
 <input [(ngModel)]="name" placeholder="name">
 </div>
 
 <h1>Добро пожаловать, {{name}}! Ниже - примеры привязки свойств и атрибутов</h1>
 
 <div class="binding">
-<label>Div с DOM-свойством textContent:</label>
+<label>Div with DOM-field textContent:</label>
 <div [textContent]="name">This Content is ignored</div>
 </div>
 
 <div class="binding">
-<label>Input с DOM-свойством value:</label>
+<label>Input с DOM-field value:</label>
 <input [value]="name" placeholder="name" type="text">
 </div>
 
 <div class="binding">
-<label>Input с аттрибутом value:</label>
-<input type="text" value="{{name}}"/>
-</div>
-
-<div class="binding">
-<label>Input с аттрибутом value:</label>
+<label>Input with attribute value:</label>
 <input type="text" value="{{name}}"/>
 </div>
 
@@ -33,7 +28,7 @@
 </div>
 
 <div class="binding">
-  <label>Button with click-event (look at the console)</label>
+  <label>Button with blur-event (look at the console)</label>
   <button (blur)="writeToConsoleBlurEvent($event)"></button>
 </div>
 
