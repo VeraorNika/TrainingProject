@@ -1,0 +1,77 @@
+<div class="wrapper">
+
+  <span>This is UsePipeComponent <br><br> Primitive Types</span>
+  <div class="flexDiv">
+    <div class="item numbers">
+
+      This is ordinary number: {{fraction}}
+      <br>This is rus-style number: {{fraction | rusFraction}}
+      <br> This is percent: {{fraction | percent}}
+      <br> This is percent: {{money | percent}}
+      <br> This is pi with number pipe: {{pi | number:"1.1-4"}}
+      <br>This is ordinary price: {{fraction}}
+      <br> <input [(ngModel)]="tax" placeholder="Enter tax percent">
+      <br>This is price with tax: {{fraction | addTax: (tax || 0)}}
+      <!--Аргументы можно заключать в скобки, чтобы добавить некоторую логику-->
+    </div>
+    <div class=" item strings">
+
+      This is ordinary string: {{stringForExperiments}}
+      <br>
+      This is kebab-styled string: {{stringForExperiments | kebab }}
+      <br>
+      This is upprecase string : {{stringForExperiments | uppercase}}
+      <br>
+      This is lowercase string : {{stringForExperiments | lowercase}}
+      <br>
+      This is string cut from begin: {{stringForExperiments | slice:6}}
+      <br>
+      This is string cut from begin and end: {{stringForExperiments | slice:6:10}}
+      <br>
+      This is string made from array: {{users | join:1:4}}
+    </div>
+    <div class="item dates">
+      This is ordinary date: {{date}}
+      <br>
+      This is date with pipe: {{date | date}}
+      <br>
+      This is date with pipe and 'dd MMMM yyyy format': {{date | date:"dd MMMM yyyy"}}
+      <br>
+      This is date with pipe and  'mediumDate' format: {{date | date:"mediumDate"}}
+    </div>
+
+    <div class="item currencies">
+
+      This is ordinary number: {{fraction}}
+      <br>
+      This is default currency pipe: {{fraction | currency}}
+      <br>
+      This is dollars without '$': {{fraction | currency: "USD":false}}
+      <br>
+      These are rubles with different formats:
+      <br>{{money | currency:'RUB':'code'}}
+      <br>{{money | currency:'RUB':'symbol-narrow'}}
+      <br>{{money | currency:'RUB':'symbol':'1.1-1'}}
+      <br>{{money | currency:'RUB':'symbol-narrow':'1.1-1'}}
+      <br>{{money | currency:'RUB':'Только сегодня по цене ':'1.0-1'}}
+    </div>
+  </div>
+  <span>Objects. Pure amd Impure pipes</span>
+  <br>
+  <div>
+    This is string made from array (PURE pipe): {{users | join}}
+    <br>
+    <input
+      [(ngModel)]="newUser"
+      type="text"
+      placeholder="Enter Name"
+    >
+    <button (click)="AddUser(newUser)">Add new User</button>
+    <br>
+    This is string made from array (IMPURE pipe): {{users | joinImpure}}
+    <br>
+    This is array with json-pipe: {{users | json}}
+    <br>
+    This is array with slice-pipe and negative start-index/end-index: {{users | slice:-3: -1}}
+  </div>
+</div>
