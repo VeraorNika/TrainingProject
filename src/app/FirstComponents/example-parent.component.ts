@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { HeroInterface } from "./Hero.interface";
 
 @Component({
   selector: 'example-parent',
@@ -9,7 +10,22 @@ import { Component } from "@angular/core";
 export class ExampleParentComponent {
 
   name ="User";
+  hero: HeroInterface = {
+    name: "John",
+    country: "USA"
+  }
 
+  changeHero(): void {
+    this.hero = {
+      name: "New Name",
+      country: "New Country"
+    }
+  }
+
+  changeHeroName(name: string): void {
+
+    this.hero.name=name;
+  }
   constructor() {
   }
 

@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { HeroInterface } from "./Hero.interface";
 
 @Component({
   selector: 'example-child',
@@ -20,7 +21,7 @@ export class ExampleChildComponent {
         this._inputValue = value;
       }
     }
-
+    @Input() hero: HeroInterface | undefined;
     @Input() set changingInputValue(value: string) {
       this._changingInputValue = value;
     }
